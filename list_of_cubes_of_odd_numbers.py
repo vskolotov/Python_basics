@@ -27,16 +27,16 @@ def finding_number(number):
 
 
 # создаем пустой список
-list_of_cubes_of_odd_numbers = []
+cube = []
 # Сознаем список состоящий из кубов нечётных чисел от 1 до 1000
-for i in range(1, 1000, 2):
-    list_of_cubes_of_odd_numbers.append(i ** 3)
+for _ in range(1, 1000, 2):
+    cube.append(_ ** 3)
 
 # Вычисляем сумму тех чисел из списка, сумма цифр которых делится нацело на 7
 sum_numbers = 0
 sum_numbers_add_17 = 0
 
-for i in list_of_cubes_of_odd_numbers:
+for i in cube:
     sum_numbers += finding_number(i)
     sum_numbers_add_17 += finding_number(i + 17)
 
